@@ -30,6 +30,8 @@ const render = () => {
   // 아래와 같은 순서로 렌더링 되기 때문에 렌더링 되는 순서는 항상 같다.
   $root.innerHTML = `
     <div>
+      <div>여러개의 useState 관리해보기</div>
+      <br />
       ${Counter()}
       ${Cat()}
     </div>
