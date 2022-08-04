@@ -16,9 +16,20 @@ export const useState = (initState) => {
   return [state, setState];
 };
 
+let renderCount = 1;
 const render = () => {
   const $root = document.getElementById("root");
-  $root.innerHTML = Counter();
+  $root.innerHTML = `
+    <div>
+      <div>하나의 useState 관리해보기</div>
+      <br />
+      <strong>총 렌더링 횟수 : ${renderCount}</strong>
+      <br />
+      ${Counter()}
+    </div>
+  `;
+
+  renderCount += 1;
 };
 
 render();
