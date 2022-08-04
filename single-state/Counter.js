@@ -7,6 +7,8 @@ const Counter = () => {
 
   return `
     <div>
+      <div>하나의 state 관리해보기</div>
+      <br />
       <strong>count : ${count}</strong>
       <button onclick="increase()">증가</button>
     </div>`;
