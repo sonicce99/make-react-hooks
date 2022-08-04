@@ -1,5 +1,5 @@
 import Counter from "./Counter.js";
-import Cat from "./Cat.js";
+import Pizza from "./Pizza.js";
 
 let currentStateKey = 0; // useState가 실행 된 횟수
 const states = []; // state를 보관할 배열
@@ -24,6 +24,7 @@ export const useState = (initState) => {
   return [state, setState];
 };
 
+let renderCount = 1;
 const render = () => {
   const $root = document.getElementById("root");
 
@@ -32,11 +33,15 @@ const render = () => {
     <div>
       <div>여러개의 useState 관리해보기</div>
       <br />
+      <strong>총 렌더링 횟수 : ${renderCount}</strong>
+      <br />
       ${Counter()}
-      ${Cat()}
+      <br />
+      ${Pizza()}
     </div>
   `;
 
+  renderCount += 1;
   currentStateKey = 0;
 };
 
